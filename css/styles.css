@@ -1,0 +1,77 @@
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h3 a {
+  color: white;
+  text-decoration: none;
+}
+.relative {
+  position: relative;
+}
+.block {
+  display: block;
+}
+.order-details {
+  border-spacing: 10px;
+}
+.order-details th {
+  text-align: right;
+}
+#orders .mdl-button--fab {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 999;
+}
+.error {
+  background-color: #d50000;
+}
+
+
+/*Layout styles*/
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 0 60px;
+}
+
+.switch__label {
+  display: block;
+}
+
+
+/*Material Design Edits*/
+.mdl-textfield{
+  margin-left: 20px;
+}
+
+.mdl-switch {
+  width: 1000%;
+}
+
+.mdl-switch + .mdl-switch{
+  margin-top: 15px;
+}
+
+.mdl-switch p {
+  padding-left: 20px;
+}
+
+.layout__header--seamed, .mdl-layout__header--scroll {
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+
+/*General Styles */
+.form__switch-group + .form__switch-group {
+  margin-top: 40px;
+}
+
+.mdl-button {
+  margin-top: 40px;
+}
+
+button.js-submit.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.success {
+    background-color: #2d9c2d;
+}

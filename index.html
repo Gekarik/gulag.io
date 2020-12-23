@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<title>Email Checklist</title>
+
+	<!-- Material Design Lite -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+</head>
+<body>	
+	<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+	  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+	      <div class="mdl-layout__header-row">
+		        <h3><a href="/">Email Checklist</a></h3>
+		        <div class="mdl-layout-spacer"></div>
+		        <div id="spinner" class="mdl-spinner mdl-js-spinner"></div>
+	        </div>
+		</header>
+		<main class="mdl-layout__content">
+			<div class="container">
+				<form id="test-form">
+					<h4>Email Info</h4>
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="client_name">
+						<label class="mdl-textfield__label" name="client_name" for="client_name">Client Name...</label>
+					</div>
+
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="segment_name">
+						<label class="mdl-textfield__label" name="segment_name" for="segment_name">Segment Name...</label>
+					</div>
+
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="mavenlink_id">
+						<label class="mdl-textfield__label" name="mavenlink_id" for="mavenlink_id">Mavenlink ID...</label>
+					</div>
+
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="requested_by">
+						<label class="mdl-textfield__label" name="requested_by" for="requested_by">Requested By...</label>
+					</div>
+
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="checklisted_by">
+						<label class="mdl-textfield__label" name="checklisted_by" for="checklisted_by">Checklisted By...</label>
+					</div>
+
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="deadline">
+						<label class="mdl-textfield__label" name="deadline" for="deadline">Deadline...</label>
+					</div>
+
+					<h4>Checklist</h4>
+					<div class="form__switch-group">
+						<h6>Images &amp; Graphics</h6>
+						<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="image_alt_text">
+						  <input value="on" type="checkbox" id="image_alt_text" name="image_alt_text" class="mdl-switch__input">
+						  <span class="mdl-switch__label"></span>
+						  <p class="switch__label">Do all images have appropriate alt-text?</p>
+						</label>
+
+						<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="image_jpg">
+						  <input value="on" type="checkbox" id="image_jpg" name="image_jpg" class="mdl-switch__input">
+						  <span class="mdl-switch__label"></span>
+						  <p class="switch__label">Is the image a .jpg (as opposed to a .png) or a gif?</p>
+						</label>
+
+						<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="image_text">
+						  <input value="on" type="checkbox" id="image_text" name="image_text" class="mdl-switch__input">
+						  <span class="mdl-switch__label"></span>
+						  <p class="switch__label">If there is text in the graphic is the spelling/grammar correct? Does the text in the graphic match the text in the body of the email?</p>
+						</label>
+						
+						<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="image_links">
+						  <input value="on" type="checkbox" id="image_links" name="image_links" class="mdl-switch__input">
+						  <span class="mdl-switch__label"></span>
+						  <p class="switch__label">Do linked graphics point to the same landing page as the text links?</p>
+						</label>
+					</div><!-- /.forn__switch-group -->
+
+					<div class="form__switch-group">
+						<h6>Links &amp; Sourcing</h6>
+						<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="link_correct">
+							  <input value="on" type="checkbox" id="link_correct" name="link_correct" class="mdl-switch__input">
+							  <span class="mdl-switch__label"></span>
+							  <p class="switch__label">Do all links point to the correct page?</p>
+						</label>
+
+						<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="link_source_code">
+							  <input value="on" type="checkbox" id="link_source_code" name="link_source_code" class="mdl-switch__input">
+							  <span class="mdl-switch__label"></span>
+							  <p class="switch__label">Paste the source code in the Comments field to the right. Is the utm_source the client's name?</p>
+						</label>
+
+						<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="link_utm">
+							  <input value="on" type="checkbox" id="link_utm" name="link_utm" class="mdl-switch__input">
+							  <span class="mdl-switch__label"></span>
+							  <p class="switch__label">Is the utm_medium "email"?</p>
+						</label>
+					</div><!-- /.form__swith-group -->
+
+					<button type="submit" class="js-submit mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+					  Submit
+					</button>
+				</form>
+			</div><!-- /.container -->
+		</main>
+		<div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
+			<div class="mdl-snackbar__text"></div>
+			<button class="mdl-snackbar__action" type="button"></button>
+		</div><!-- /#snackbar -->
+    </div>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
